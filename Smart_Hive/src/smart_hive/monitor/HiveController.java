@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class HiveController implements Runnable{
 
     private Hive hive;
-    private Monitor monitor;
+    public Monitor monitor;
 
     public HiveController(Hive hive, Monitor monitor) {
         this.hive = hive;
@@ -18,11 +18,10 @@ public class HiveController implements Runnable{
             Scanner scan = new Scanner(hive.getEntrada());
             while (scan.hasNextLine()){
                 String aux = scan.nextLine();
-                String lista[] = aux.split(",");
-                System.out.println(lista);
+                System.out.println(aux);
             }
         }catch (Exception e){
-            System.out.println(e);
+            System.out.println(e.toString());
         }
     }
 

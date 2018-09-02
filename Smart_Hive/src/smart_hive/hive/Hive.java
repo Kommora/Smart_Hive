@@ -2,11 +2,10 @@ package smart_hive.hive;
 
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Random;
 
-public class Hive implements Serializable {
+public class Hive {
 
     private double weight, in_temper, ex_temper;
     private String location;
@@ -41,10 +40,6 @@ public class Hive implements Serializable {
     }
 
     public void setWeight(double weight) {
-        this.weight = weight;
-    }
-
-    public void setWeight() {
         this.weight = weight;
     }
 
