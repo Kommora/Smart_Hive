@@ -43,8 +43,6 @@ public class Monitor {
 
     }
 
-
-
     public static void main(String Args[]){
         Monitor s = new Monitor(6969);
         s.conectar();
