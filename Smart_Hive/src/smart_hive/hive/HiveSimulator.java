@@ -1,4 +1,4 @@
-package smart_hive;
+package smart_hive.hive;
 
 import java.io.*;
 import java.net.Socket;

@@ -1,5 +1,6 @@
-package smart_hive;
+package smart_hive.monitor;
 
+import smart_hive.hive.Hive;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;

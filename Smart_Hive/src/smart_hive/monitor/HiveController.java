@@ -1,5 +1,6 @@
-package smart_hive;
+package smart_hive.monitor;
 
+import smart_hive.hive.Hive;
 import java.util.Scanner;
 
 public class HiveController implements Runnable{
