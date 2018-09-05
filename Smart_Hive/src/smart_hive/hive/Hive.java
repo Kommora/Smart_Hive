@@ -10,29 +10,39 @@ public class Hive {
     private double weight, in_temper, ex_temper;
     private String location;
     private LocalDateTime moment;
-    private final int idClient= new Random().nextInt(10000);
+//    private final int idClient= new Random().nextInt(10000);
     private InputStream entrada, inputClient;
     private OutputStream saida;
+    private int idClient;
 
     public Hive(double weight, double in_temper, double ex_temper, String location, LocalDateTime moment) {
-        this.weight = weight;
-        this.in_temper = in_temper;
-        this.ex_temper = ex_temper;
-        this.location = location;
-        this.moment = moment;
+        setWeight(weight);
+        setIn_temper(in_temper);
+        setEx_temper(ex_temper);
+        setLocation(location);
+        setMoment(moment);
     }
 
     public Hive(InputStream entrada, OutputStream saida) {
-        this.entrada = entrada;
-        this.saida = saida;
+        setEntrada(entrada);
+        setSaida(saida);
     }
 
     public Hive() {
-        this.weight = (new Random().nextInt(100)+1) + 300;
-        this.in_temper = (new Random().nextInt(10)+1) + 30;
-        this.ex_temper = (new Random().nextInt(10)+1) + 35;
-        this.location = "";
-        this.moment = LocalDateTime.now();
+        setWeight((new Random().nextInt(100)+1) + 300);
+        setIn_temper((new Random().nextInt(10)+1) + 30);
+        setEx_temper((new Random().nextInt(10)+1) + 35);
+        setLocation("");
+        setMoment(LocalDateTime.now());
+    }
+
+    public Hive(int idClient){
+        setIdClient(idClient);
+        setWeight((new Random().nextInt(100)+1) + 300);
+        setIn_temper((new Random().nextInt(10)+1) + 30);
+        setEx_temper((new Random().nextInt(10)+1) + 35);
+        setLocation("");
+        setMoment(LocalDateTime.now());
     }
 
     public double getWeight() {
@@ -75,8 +85,12 @@ public class Hive {
         this.moment = moment;
     }
 
-    public final int getIdClient() {
+    public int getIdClient() {
         return idClient;
+    }
+
+    public void setIdClient(int idClient){
+        this.idClient = idClient;
     }
 
     public InputStream getEntrada() {

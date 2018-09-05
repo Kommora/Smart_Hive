@@ -13,6 +13,8 @@ public class Monitor {
     private int port;
     private Map<Integer, List<Hive>> clients;
 
+    public Monitor(){}
+
     public Monitor(int port){
         this.port = port;
     }
