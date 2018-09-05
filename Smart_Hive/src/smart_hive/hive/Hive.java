@@ -5,6 +5,7 @@ import java.io.OutputStream;
 import java.time.LocalDateTime;
 import java.util.Random;
 
+@SuppressWarnings(value = { "all" })
 public class Hive {
 
     private double weight, in_temper, ex_temper;
@@ -13,6 +14,8 @@ public class Hive {
     private final int idClient= new Random().nextInt(10000);
     private InputStream entrada, inputClient;
     private OutputStream saida;
+    
+    private int idHive;
 
     public Hive(double weight, double in_temper, double ex_temper, String location, LocalDateTime moment) {
         this.weight = weight;
