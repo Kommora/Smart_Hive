@@ -18,7 +18,7 @@ public class HiveController implements Runnable{
             Scanner scan = new Scanner(hive.getEntrada());
             while (scan.hasNextLine()){
                 String aux = scan.nextLine();
-                System.out.println(aux);
+                monitor.sendToClient(hive.getIdClient(), aux);
             }
         }catch (Exception e){
             System.out.println(e.toString());

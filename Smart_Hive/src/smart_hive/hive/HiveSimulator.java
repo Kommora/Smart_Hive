@@ -14,6 +14,9 @@ public class HiveSimulator {
             Socket hive = new Socket("localhost",6969);
             PrintStream outPut = new PrintStream(hive.getOutputStream());
             while (true) {
+                /*Indetificador da colméia*/outPut.println(0);
+                /*Id do cliente*/outPut.println(2);
+
                 outPut.println(v.toJson());
                 Thread.sleep(5000);
                 v.randAll();
