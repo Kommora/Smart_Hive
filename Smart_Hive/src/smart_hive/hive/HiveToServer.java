@@ -3,7 +3,7 @@ package smart_hive.hive;
 import java.io.*;
 import java.net.Socket;
 
-public class HiveToMonitor {
+public class HiveToServer {
 
     public static void main(String[] args){
 

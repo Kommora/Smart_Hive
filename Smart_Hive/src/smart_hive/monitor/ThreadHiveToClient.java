@@ -3,14 +3,14 @@ package smart_hive.monitor;
 import smart_hive.hive.Hive;
 import java.util.Scanner;
 
-public class HiveController implements Runnable{
+public class ThreadHiveToClient implements Runnable{
 
     private Hive hive;
-    public Monitor monitor;
+    private Server server;
 
-    public HiveController(Hive hive, Monitor monitor) {
+    public ThreadHiveToClient(Hive hive, Server server) {
         this.hive = hive;
-        this.monitor = monitor;
+        this.server = server;
     }
 
     public void run(){
@@ -18,7 +18,7 @@ public class HiveController implements Runnable{
             Scanner scan = new Scanner(hive.getEntrada());
             while (scan.hasNextLine()){
                 String aux = scan.nextLine();
-                monitor.sendToClient(hive.getIdClient(), aux);
+                server.sendToClient(hive.getIdClient(), aux);
             }
         }catch (Exception e){
             System.out.println(e.toString());

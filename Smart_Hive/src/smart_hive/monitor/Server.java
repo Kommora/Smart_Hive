@@ -2,20 +2,19 @@ package smart_hive.monitor;
 
 import smart_hive.hive.Hive;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.io.PrintStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.*;
 
-public class Monitor {
+public class Server {
 
     private int port;
     private Map<Integer, List<Hive>> clients;//depois mudarmos para object
 
-    public Monitor(){}
+    public Server(){}
 
-    public Monitor(int port){
+    public Server(int port){
         this.port = port;
     }
 
@@ -45,7 +44,7 @@ public class Monitor {
                         //fazer depois
                     }
 
-                    HiveController htm = new HiveController(hiveAux,this);
+                    ThreadHiveToClient htm = new ThreadHiveToClient(hiveAux,this);
                     new Thread(htm).start();
 
                 }else{
@@ -88,7 +87,7 @@ public class Monitor {
     }
 
     public static void main(String Args[]){
-        Monitor s = new Monitor(6969);
+        Server s = new Server(6969);
         s.conectar();
     }
 

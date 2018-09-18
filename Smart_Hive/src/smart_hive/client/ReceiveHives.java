@@ -8,7 +8,7 @@ import java.util.Scanner;
 /*
 -- Classe para mandar comandos para o servidor
  */
-public class ClientController {
+public class ReceiveHives {
 
     public static void main(String[] args){
 
