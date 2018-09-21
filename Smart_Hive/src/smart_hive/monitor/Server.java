@@ -9,17 +9,19 @@ import java.util.*;
 
 public class Server {
 
-    private int port;
-    private Map<Integer, List<Hive>> clients;//depois mudarmos para object
+    private int port; // porta onde o servidos será hospedado
+    private Map<Integer, List<Hive>> clients;// mapeia cada cliente conectado a uma lista com suas colmeias
 
     public Server(){}
 
     public Server(int port){
         this.port = port;
     }
-
+    
+    //Metodo que iniciará o servidor
     public void conectar(){
         try {
+        	//cria um servidor na porta escolhida
             ServerSocket server = new ServerSocket(port);
             clients = new HashMap<>();
             //List<Hive> hs = new ArrayList<>();
@@ -27,33 +29,44 @@ public class Server {
 
             while (!false){
                 System.out.println("esperando");
+                //aceitando conexões
                 Socket con = server.accept();
+                // leitor para verificar o que foi recebido
                 Scanner scan = new Scanner(con.getInputStream());
+                //colmeias enviam um sinal com 0 para se diferenciarem dos clientes
                 if(scan.nextLine().equals("0") ){
                     System.out.println("Hive");
                     System.out.println("Hive Conectado");
-
+                    
+                    // salva o id do dono da colmeia
                     int idClient = scan.nextInt();
+                    //cria uma comeia com os sockets do servidor, para receber e enviar dados para o mesmo 
                     Hive hiveAux = new Hive(con.getInputStream(), con.getOutputStream());
                     hiveAux.setIdClient(idClient);
 
+                    //verifica se o cliente já estava cadastrado no map com outras colmeias
                     if(clients.containsKey(idClient)){
                         clients.get(idClient).add(hiveAux);
 
                     }else{
                         //fazer depois
                     }
-
+                    // inicia uma thread com a colmeia e o servidor, para que ela possa executar as próprias tarefas enquanto o servidor volta a ouvir as solicitações
                     ThreadHiveToClient htm = new ThreadHiveToClient(hiveAux,this);
                     new Thread(htm).start();
 
                 }else{
                     System.out.println("Cliente");
                     System.out.println("Esperando idClient");
+                    // recebendo o id do cliente
                     int idClient = scan.nextInt();
-
+                    
+                    // verifica se o cliente está cadastrado no map com outras colmeias
                     if(!clients.containsKey(idClient)){
+                    	//adiciona o cliente caso o mesmo nao esjeta no map
                         clients.put(idClient, new ArrayList<Hive>());
+                        
+                     // inicia uma thread com o cliente e o servidor, para que ela possa executar as próprias tarefas enquanto o servidor volta a ouvir as solicitações
                         Hive hiveFake = new Hive(con.getInputStream(), con.getOutputStream());
                         clients.get(idClient).add(hiveFake);
                     }else{
