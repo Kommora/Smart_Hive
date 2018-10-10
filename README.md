@@ -21,6 +21,8 @@ As instruções a seguir garantirá uma cópia funcional do projeto na sua máqu
 
 ## Testes
 
+Utilizamos o framework JUnit na versão 4 para realização dos testes de unidade. Para mais informações, acesse: https://junit.org/junit4/
+
 ## Versionamento
 
 Nós usamos o GitHub para o versionamento.
