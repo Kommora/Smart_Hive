@@ -6,16 +6,18 @@ As instruções a seguir garantirá uma cópia funcional do projeto na sua máqu
 
 ### Pré-requisitos
 
-```
-* [https://www.java.com/pt_BR/download/] - Java 7 ou superior  
-```
+
+[Java 7 ou superior](https://www.java.com/pt_BR/download/)  
+
 
 ### Instalando
 
-```
-* [Instalação do Java para Linux](https://www.edivaldobrito.com.br/instalar-java-no-linux-veja-como-fazer-isso-manualmente/) - 
-* [Instalação do Java para Windows](https://www.java.com/pt_BR/download/help/windows_manual_download.xml) 
-```
+
+[Instalação do Java para Linux](https://www.edivaldobrito.com.br/instalar-java-no-linux-veja-como-fazer-isso-manualmente/) 
+
+
+[Instalação do Java para Windows](https://www.java.com/pt_BR/download/help/windows_manual_download.xml) 
+
 
 ## Testes
 
