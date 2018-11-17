@@ -10,8 +10,8 @@ import java.io.OutputStream;
 public class Client {
 
     private int idClient;// id unico do cliente utilizado para determinar propriedade sobre as colmeias
-    private InputStream inputStream; // variável por onde o cliente receberá as informações de suas colméias
-    private OutputStream outputStream; // variável que estabelecerá contato com servidor e enviará dados requisitados pelo servidor
+    private InputStream inputStream; // variavel por onde o cliente recebera as informacoes de suas colmeias
+    private OutputStream outputStream; // variavel que estabelecer contato com servidor e enviar dados requisitados pelo servidor
 
     //Contrutor vazio
     public Client(){

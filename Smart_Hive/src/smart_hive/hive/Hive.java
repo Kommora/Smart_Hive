@@ -7,10 +7,10 @@ import java.util.Random;
 
 public class Hive {
 
-    private double weight, in_temper, ex_temper; // parametros que armazenam informações sobre a colmeia, respectivamente, peso, temperatura interior e temperatura exterior
+    private double weight, in_temper, ex_temper; // parametros que armazenam informacoes sobre a colmeia, respectivamente, peso, temperatura interior e temperatura exterior
     private String location; // armazena a localizacao da colmeia
     private LocalDateTime moment; // armazena a hora
-    private InputStream entrada, inputClient; // variáveis de comunicacao com o servidor
+    private InputStream entrada, inputClient; // variaveis de comunicacao com o servidor
     private OutputStream saida; 
     private int idClient; // id do dono da colmeia
     
@@ -23,7 +23,7 @@ public class Hive {
         setMoment(moment);
     }
     
-    //contrutor com variáveis de comunicaçao
+    //contrutor com variaveis de comunicacao
     public Hive(InputStream entrada, OutputStream saida) {
         setEntrada(entrada);
         setSaida(saida);
@@ -38,7 +38,7 @@ public class Hive {
         setMoment(LocalDateTime.now());
     }
     
-    //contrutor aleatório ja incluido o dono da colmeia
+    //contrutor aleatorio ja incluido o dono da colmeia
     public Hive(int idClient){
         setIdClient(idClient);
         setWeight((new Random().nextInt(100)+1) + 300);
@@ -133,7 +133,7 @@ public class Hive {
                 "\",\"idClient\":"+idClient+"}";
     }
     
-    //funçao de aleatoriedade afim de simular alterações do mundo real em sensores
+    //funcao de aleatoriedade afim de simular alteracoes do mundo real em sensores
     public void randAll(){
         this.weight = (new Random().nextInt(100)+1) + 300;
         this.in_temper = (new Random().nextInt(10)+1) + 30;

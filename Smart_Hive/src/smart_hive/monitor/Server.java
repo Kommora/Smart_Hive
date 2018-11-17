@@ -9,7 +9,7 @@ import java.util.*;
 
 public class Server {
 
-    private int port; // porta onde o servidos será hospedado
+    private int port; // porta onde o servidos sera hospedado
     private Map<Integer, List<Hive>> clients;// mapeia cada cliente conectado a uma lista com suas colmeias
 
     public Server(){}
@@ -18,7 +18,7 @@ public class Server {
         this.port = port;
     }
     
-    //Metodo que iniciará o servidor
+    //Metodo que iniciar o servidor
     public void conectar(){
         try {
         	//cria um servidor na porta escolhida
@@ -29,7 +29,7 @@ public class Server {
 
             while (!false){
                 System.out.println("esperando");
-                //aceitando conexões
+                //aceitando conexoes
                 Socket con = server.accept();
                 // leitor para verificar o que foi recebido
                 Scanner scan = new Scanner(con.getInputStream());
@@ -44,14 +44,14 @@ public class Server {
                     Hive hiveAux = new Hive(con.getInputStream(), con.getOutputStream());
                     hiveAux.setIdClient(idClient);
 
-                    //verifica se o cliente já estava cadastrado no map com outras colmeias
+                    //verifica se o cliente ja estava cadastrado no map com outras colmeias
                     if(clients.containsKey(idClient)){
                         clients.get(idClient).add(hiveAux);
 
                     }else{
                         //fazer depois
                     }
-                    // inicia uma thread com a colmeia e o servidor, para que ela possa executar as próprias tarefas enquanto o servidor volta a ouvir as solicitações
+                    // inicia uma thread com a colmeia e o servidor, para que ela possa executar as proprias tarefas enquanto o servidor volta a ouvir as solicitacoes
                     ThreadHiveToClient htm = new ThreadHiveToClient(hiveAux,this);
                     new Thread(htm).start();
 
@@ -61,12 +61,12 @@ public class Server {
                     // recebendo o id do cliente
                     int idClient = scan.nextInt();
                     
-                    // verifica se o cliente está cadastrado no map com outras colmeias
+                    // verifica se o cliente estï¿½ cadastrado no map com outras colmeias
                     if(!clients.containsKey(idClient)){
                     	//adiciona o cliente caso o mesmo nao esjeta no map
                         clients.put(idClient, new ArrayList<Hive>());
                         
-                     // inicia uma thread com o cliente e o servidor, para que ela possa executar as próprias tarefas enquanto o servidor volta a ouvir as solicitações
+                     // inicia uma thread com o cliente e o servidor, para que ela possa executar as proprias tarefas enquanto o servidor volta a ouvir as solicitacoes
                         Hive hiveFake = new Hive(con.getInputStream(), con.getOutputStream());
                         clients.get(idClient).add(hiveFake);
                     }else{

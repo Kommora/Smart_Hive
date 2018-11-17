@@ -15,7 +15,7 @@ public class HiveToServer {
             //cria um socket para a colmeia se comunicar com o servidor
             Socket hive = new Socket("localhost",6969);
             
-            // cria uma conexão com o output da colmeia para enviar dados para o servidor
+            // cria uma conexao com o output da colmeia para enviar dados para o servidor
             PrintStream outPut = new PrintStream(hive.getOutputStream());
             
             //loop infinito para enviar dados sobre a colmeia para o servidor
@@ -27,7 +27,7 @@ public class HiveToServer {
                 outPut.println(v.toJson());
                 //periodo de espera para nao floodar o servidor
                 Thread.sleep(5000);
-                //randomiza os dados atuais da colmeia com intuito de simular alterações do mundo real
+                //randomiza os dados atuais da colmeia com intuito de simular alteracoes do mundo real
                 v.randAll();
             }
 
