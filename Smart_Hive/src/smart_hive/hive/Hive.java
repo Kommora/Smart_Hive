@@ -10,41 +10,31 @@ public class Hive {
     private double weight, in_temper, ex_temper; // parametros que armazenam informacoes sobre a colmeia, respectivamente, peso, temperatura interior e temperatura exterior
     private String location; // armazena a localizacao da colmeia
     private LocalDateTime moment; // armazena a hora
-    private InputStream entrada, inputClient; // variaveis de comunicacao com o servidor
-    private OutputStream saida; 
     private int idClient; // id do dono da colmeia
+    private int idHive;
     
     //Construtor somente com dados da colmeia
-    public Hive(double weight, double in_temper, double ex_temper, String location, LocalDateTime moment) {
-        setWeight(weight);
-        setIn_temper(in_temper);
-        setEx_temper(ex_temper);
-        setLocation(location);
-        setMoment(moment);
+    public Hive(double weight, double in_temper, double ex_temper, String location, LocalDateTime moment, int idClient, int idHive) {
+        this.weight = weight;
+        this.in_temper = in_temper;
+        this.ex_temper = ex_temper;
+        this.location = location;
+        this.moment = moment;
+        this.idClient = idClient;
+        this.idHive = idHive;
     }
-    
-    //contrutor com variaveis de comunicacao
-    public Hive(InputStream entrada, OutputStream saida) {
-        setEntrada(entrada);
-        setSaida(saida);
-    }
-    
+
     //contrutor utilizando aleatoriedade, afim de simular os sensores
-    public Hive() {
-        setWeight((new Random().nextInt(100)+1) + 300);
-        setIn_temper((new Random().nextInt(10)+1) + 30);
-        setEx_temper((new Random().nextInt(10)+1) + 35);
-        setLocation("");
-        setMoment(LocalDateTime.now());
-    }
+    public Hive() { }
     
     //contrutor aleatorio ja incluido o dono da colmeia
-    public Hive(int idClient){
+    public Hive(int idClient, int idHive){
         setIdClient(idClient);
+        setIdHive(idHive);
         setWeight((new Random().nextInt(100)+1) + 300);
         setIn_temper((new Random().nextInt(10)+1) + 30);
         setEx_temper((new Random().nextInt(10)+1) + 35);
-        setLocation("");
+        setLocation("-5.145030,-38.092607");
         setMoment(LocalDateTime.now());
     }
 
@@ -96,41 +86,28 @@ public class Hive {
         this.idClient = idClient;
     }
 
-    public InputStream getEntrada() {
-        return entrada;
+    public int getIdHive() {
+        return idHive;
     }
 
-    public void setEntrada(InputStream entrada) {
-        this.entrada = entrada;
-    }
-
-    public OutputStream getSaida() {
-        return saida;
-    }
-
-    public void setSaida(OutputStream saida) {
-        this.saida = saida;
+    public void setIdHive(int idHive) {
+        this.idHive = idHive;
     }
 
     @Override
     public String toString() {
-        return "Hive{" +
-                "weight=" + weight +
-                ", in_temper=" + in_temper +
-                ", ex_temper=" + ex_temper +
-                ", location='" + location + '\'' +
-                ", moment=" + moment +
-                ", id=" + idClient +
+        return "Hive{" +"\n"+
+                "weight=" + weight +"\n"+
+                "\t, in_temper=" + in_temper +"\n"+
+                "\t, ex_temper=" + ex_temper +"\n"+
+                "\t, location='" + location + '\'' +"\n"+
+                "\t, moment=" + moment +"\n"+
+                "\t, id=" + idClient +"\n"+
                 '}';
     }
 
-    public String toJson(){
-        return "{\"weight\":"+weight+
-                ",\"in_temper\":"+in_temper+
-                ",\"ex_temper\":"+ex_temper+
-                ",\"location\":\""+location+
-                "\",\"moment\":\""+moment+
-                "\",\"idClient\":"+idClient+"}";
+    public String toSend(){
+        return idHive+";"+weight+";"+in_temper+";"+ex_temper+";"+location+";"+moment+";"+idClient;
     }
     
     //funcao de aleatoriedade afim de simular alteracoes do mundo real em sensores
