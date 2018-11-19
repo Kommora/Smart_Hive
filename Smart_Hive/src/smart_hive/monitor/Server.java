@@ -108,8 +108,8 @@ public class Server {
     }
 
     public static void main(String Args[]){
-        Server s = new Server(6969);
-        s.conectar();
+//        Server s = new Server(6969);
+//        s.conectar();
     }
 
 }

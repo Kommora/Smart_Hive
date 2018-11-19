@@ -2,6 +2,7 @@ package smart_hive.hive;
 
 import java.io.*;
 import java.net.Socket;
+import java.net.UnknownHostException;
 import java.util.Scanner;
 
 public class HiveToServer{
@@ -61,8 +62,72 @@ public class HiveToServer{
         }
     }
 
+    public void executaHiveToServer(Hive hive)throws  Exception{
+        try {
+//             cria uma nova colmeia
+//            Hive v = new Hive();
+
+            System.out.println(hive.toSend());
+
+            //cria um socket para a colmeia se comunicar com o servidor
+            Socket socket = new Socket("localhost",6969);
+
+            // cria uma conexao com o output da colmeia para enviar dados para o servidor
+            //PrintStream outPut = new PrintStream(hive.getOutputStream());
+
+            //Handshake para conectar
+                if(handShake(socket, hive.getIdClient(), hive.getIdHive())){
+                    System.out.println("Enviar mensagens");
+
+                    PrintStream outPut = new PrintStream(socket.getOutputStream());
+                    //laço para enviar mensagens
+                    while (!socket.isClosed()){
+                        /*Indetificador de que é uma colmeia*/outPut.println(0);
+                        /*Id do cliente*/outPut.println(2);
+
+                        //envia os dados atuais da colmeia para o servidor
+                        outPut.println(hive.toSend());
+                        //periodo de espera para nao floodar o servidor
+                        Thread.sleep(5000);
+                        //randomiza os dados atuais da colmeia com intuito de simular alteracoes do mundo real
+                        hive.randAll();
+                    }
+                }else {
+                    throw new Exception();
+                }
+
+            }
+            catch (IOException e) {
+                System.out.println("Conexão recusada");
+                throw new Exception();
+            } catch (InterruptedException e) {
+                throw new Exception();
+            } catch (Exception e) {
+                System.out.println("Handshake não foi possivel");
+                throw new Exception();
+            }
+//            catch (InterruptedException e1) {
+//                e1.printStackTrace();
+//            } catch (UnknownHostException e1) {
+//                e1.printStackTrace();
+//            } catch (IOException e1) {
+//                e1.printStackTrace();
+//            } catch (Exception e1) {
+//                e1.printStackTrace();
+//            }
+
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+
+    }
+
     public static void main(String[] args) throws Exception {
-        HiveToServer v = new HiveToServer();
-        v.send(new Hive(1,1));
+//        HiveToServer v = new HiveToServer();
+//        v.send(new Hive(1,1));
     }
 }

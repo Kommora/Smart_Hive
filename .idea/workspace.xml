@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0108c3b-4dc2-4fae-90d3-cc479f0073e4" name="Default Changelist" comment="Refatoração">
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Smart_Hive/Smart_Hive.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Smart_Hive/Smart_Hive.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Smart_Hive/src/smart_hive/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Smart_Hive/src/smart_hive/client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smart_Hive/src/Pipes/PipeJsonToString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smart_Hive/src/Pipes/Pipes.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Smart_Hive/src/smart_hive/client/ReceiveHives.java" beforeDir="false" afterPath="$PROJECT_DIR$/Smart_Hive/src/smart_hive/client/ReceiveHives.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Smart_Hive/src/smart_hive/hive/HiveToServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Smart_Hive/src/smart_hive/hive/HiveToServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Smart_Hive/src/smart_hive/monitor/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/Smart_Hive/src/smart_hive/monitor/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Smart_Hive/src/smart_hive/test/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Smart_Hive/src/smart_hive/test/Tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smart_Hive/src/smart_hive/view/ClientView.java" beforeDir="false" afterPath="$PROJECT_DIR$/Smart_Hive/src/smart_hive/view/ClientView.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,34 +26,38 @@
     <session id="1012778921">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.29" value="1" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="classpath" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="10" />
+          <entry key="java" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Eclipse" value="1" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="10" />
+          <entry key="JAVA" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="507" />
+          <entry key="java" value="930" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="507" />
+          <entry key="JAVA" value="930" />
         </counts>
       </usages-collector>
     </session>
@@ -99,31 +105,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/client/Client.java">
+        <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/hive/Hive.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="65" column="5" lean-forward="true" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-159">
+              <caret line="84" column="38" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/client/Observer.java">
+        <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/client/ReceiveHives.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Smart_Hive/src/Pipes/PipeJsonToString.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="166">
+              <caret line="66" column="59" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -131,17 +125,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/view/ClientView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="230">
+              <caret line="75" column="41" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Smart_Hive/src/Pipes/Pipes.java">
+        <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/hive/HiveToServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+            <state relative-caret-position="345">
+              <caret line="92" column="28" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/monitor/Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="51" column="40" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/client/MainClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/hive/MainHive.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/monitor/MainServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -185,17 +215,19 @@
         <option value="$PROJECT_DIR$/Smart_Hive/src/smart_hive/monitor/ThreadHiveToClient.java" />
         <option value="$PROJECT_DIR$/Smart_Hive/src/smart_hive/tests/Tests.java" />
         <option value="$PROJECT_DIR$/Smart_Hive/src/smart_hive/client/Client.java" />
-        <option value="$PROJECT_DIR$/Smart_Hive/src/smart_hive/client/ReceiveHives.java" />
-        <option value="$PROJECT_DIR$/Smart_Hive/src/smart_hive/monitor/Server.java" />
         <option value="$PROJECT_DIR$/Smart_Hive/src/smart_hive/test/ThreadTest.java" />
         <option value="$PROJECT_DIR$/Smart_Hive/src/smart_hive/test/ThreadTestServer.java" />
-        <option value="$PROJECT_DIR$/Smart_Hive/src/smart_hive/test/ThreadTestClient.java" />
         <option value="$PROJECT_DIR$/Smart_Hive/src/smart_hive/test/ThreadTestHive.java" />
-        <option value="$PROJECT_DIR$/Smart_Hive/src/smart_hive/hive/HiveToServer.java" />
         <option value="$PROJECT_DIR$/Smart_Hive/src/smart_hive/test/Tests.java" />
         <option value="$PROJECT_DIR$/Smart_Hive/src/smart_hive/Pipes/Pipes.java" />
         <option value="$PROJECT_DIR$/Smart_Hive/src/Pipes/Pipes.java" />
+        <option value="$PROJECT_DIR$/Smart_Hive/src/smart_hive/monitor/Server.java" />
+        <option value="$PROJECT_DIR$/Smart_Hive/src/smart_hive/test/ThreadTestClient.java" />
+        <option value="$PROJECT_DIR$/Smart_Hive/src/smart_hive/client/MainClient.java" />
+        <option value="$PROJECT_DIR$/Smart_Hive/src/smart_hive/hive/HiveToServer.java" />
+        <option value="$PROJECT_DIR$/Smart_Hive/src/smart_hive/hive/MainHive.java" />
         <option value="$PROJECT_DIR$/Smart_Hive/src/smart_hive/view/ClientView.java" />
+        <option value="$PROJECT_DIR$/Smart_Hive/src/smart_hive/client/ReceiveHives.java" />
       </list>
     </option>
   </component>
@@ -234,12 +266,6 @@
               <item name="Smart_Hive" type="b2602c69:ProjectViewProjectNode" />
               <item name="Smart_Hive" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Pipes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Smart_Hive" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Smart_Hive" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="smart_hive" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -258,24 +284,7 @@
             </path>
             <path>
               <item name="Smart_Hive" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Smart_Hive" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="smart_hive" type="462c0819:PsiDirectoryNode" />
-              <item name="monitor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Smart_Hive" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Smart_Hive" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="smart_hive" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Smart_Hive" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Smart_Hive" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="smart_hive" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -291,15 +300,17 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542589016984" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542651123060" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../teste" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Smart_Hive/src/smart_hive/monitor" />
+      <recent name="$PROJECT_DIR$/Smart_Hive/src/smart_hive/hive" />
       <recent name="$PROJECT_DIR$/Smart_Hive/src/smart_hive/client" />
       <recent name="$PROJECT_DIR$/Smart_Hive/src/smart_hive" />
     </key>
@@ -316,13 +327,52 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.HiveToServer">
+  <component name="RunManager" selected="Application.MainHive">
     <configuration name="HiveToServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="smart_hive.hive.HiveToServer" />
       <module name="Smart_Hive" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="smart_hive.hive.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="smart_hive.client.MainClient" />
+      <module name="Smart_Hive" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="smart_hive.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainHive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="smart_hive.hive.MainHive" />
+      <module name="Smart_Hive" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="smart_hive.hive.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="smart_hive.monitor.MainServer" />
+      <module name="Smart_Hive" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="smart_hive.monitor.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -343,63 +393,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="smart_hive.monitor.Server" />
-      <module name="Smart_Hive" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="smart_hive.monitor.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Smart_Hive" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="smart_hive.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="smart_hive.test" />
-      <option name="MAIN_CLASS_NAME" value="smart_hive.test.Tests" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tests.createSameServer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Smart_Hive" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="smart_hive.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="smart_hive.test" />
-      <option name="MAIN_CLASS_NAME" value="smart_hive.test.Tests" />
-      <option name="METHOD_NAME" value="createSameServer" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="JUnit.Tests" />
-      <item itemvalue="JUnit.Tests.createSameServer" />
-      <item itemvalue="Application.Server" />
       <item itemvalue="Application.ReceiveHives" />
       <item itemvalue="Application.HiveToServer" />
+      <item itemvalue="Application.MainServer" />
+      <item itemvalue="Application.MainClient" />
+      <item itemvalue="Application.MainHive" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainHive" />
+        <item itemvalue="Application.MainClient" />
+        <item itemvalue="Application.MainServer" />
         <item itemvalue="Application.HiveToServer" />
         <item itemvalue="Application.ReceiveHives" />
-        <item itemvalue="Application.Server" />
-        <item itemvalue="JUnit.Tests" />
-        <item itemvalue="JUnit.Tests.createSameServer" />
       </list>
     </recent_temporary>
   </component>
@@ -491,10 +498,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-1" width="1366" height="741" extended-state="6" />
+    <frame x="0" y="30" width="1366" height="738" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21439394" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49881798" visible="true" weight="0.23328267" />
+      <window_info id="Structure" order="1" sideWeight="0.501182" side_tool="true" weight="0.23328267" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -502,7 +510,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29058442" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29026845" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39935064" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -510,7 +518,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32954547" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5007576" side_tool="true" weight="0.32954547" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32954547" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49924242" weight="0.32954547" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49924242" weight="0.32885906" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -575,60 +583,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.3.1/junit-platform-commons-1.3.1.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6219">
-          <caret line="467" column="88" selection-start-line="467" selection-start-column="88" selection-end-line="467" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/hive/Hive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="105" column="20" selection-start-line="98" selection-start-column="8" selection-end-line="105" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/client/ReceiveHives.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="35" column="38" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/test/ThreadTestClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#196#197#0" expanded="true" />
-            <element signature="e#230#231#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.3.1/junit-platform-commons-1.3.1.jar!/org/junit/platform/commons/util/ReflectionUtils.class" />
     <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/test/ThreadTestServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-          <folding>
-            <element signature="e#254#255#0" expanded="true" />
-            <element signature="e#287#288#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/hive/HiveToServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="49" column="38" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -636,6 +595,59 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/Pipes/Pipes.java" />
+    <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/Pipes/PipeJsonToString.java" />
+    <entry file="file://$PROJECT_DIR$/Smart_Hive/src/Pipes/PipeJsonToString.java" />
+    <entry file="file://$PROJECT_DIR$/Smart_Hive/src/Pipes/Pipes.java" />
+    <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/client/Observer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/test/Tests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/test/ThreadTestClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/monitor/MainServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/client/MainClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/hive/MainHive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/client/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -644,70 +656,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/monitor/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="852">
-          <caret line="68" column="42" selection-start-line="68" selection-start-column="42" selection-end-line="68" selection-end-column="42" />
+        <state relative-caret-position="238">
+          <caret line="51" column="40" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/test/Tests.java">
+    <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/hive/HiveToServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="345">
+          <caret line="92" column="28" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/Pipes/Pipes.java">
+    <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/hive/Hive.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/Pipes/PipeJsonToString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/client/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="65" column="5" lean-forward="true" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-159">
+          <caret line="84" column="38" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/view/ClientView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="230">
+          <caret line="75" column="41" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Smart_Hive/src/Pipes/PipeJsonToString.java">
+    <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/client/ReceiveHives.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Smart_Hive/src/Pipes/Pipes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Smart_Hive/src/smart_hive/client/Observer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        <state relative-caret-position="166">
+          <caret line="66" column="59" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -787,6 +765,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>junit-4.12</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
