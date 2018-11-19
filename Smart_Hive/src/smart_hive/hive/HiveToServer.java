@@ -23,13 +23,13 @@ public class HiveToServer{
             if (aux.equals("0")){
                 return true;
             }
-            break;
+            throw new Exception();
         }
-        return false;
+        throw new Exception();
 
     }
 
-    public void send(Hive hive){
+    public void send(Hive hive) throws Exception{
         try {
 
             //cria um socket para a colmeia se comunicar com o servidor
@@ -42,7 +42,7 @@ public class HiveToServer{
                 PrintStream outPut = new PrintStream(socket.getOutputStream());
                 //laço para enviar mensagens
                 while (!socket.isClosed()){
-                    outPut.println("1,2,3,4,5,6,7,8");
+                    outPut.println(hive.toSend());
                     Thread.sleep(5000);
                 }
 
@@ -52,14 +52,16 @@ public class HiveToServer{
 
         } catch (IOException e) {
             System.out.println("Conexão recusada");
+            throw new Exception();
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            throw new Exception();
         } catch (Exception e) {
             System.out.println("Handshake não foi possivel");
+            throw new Exception();
         }
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception {
         HiveToServer v = new HiveToServer();
         v.send(new Hive(1,1));
     }

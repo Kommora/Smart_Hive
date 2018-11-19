@@ -11,12 +11,10 @@ import java.util.Scanner;
 
 public class ReceiveHives {
 
-    public static void main(String[] args){
-
+    public void send(int idClient) throws Exception {
         try {
             Client c = new Client();
-            c.setIdClient(1);
-//          System.out.println(c.toJson());
+            c.setIdClient(idClient);
             // inicia um socket pro cliente na porta 6969
             Socket client = new Socket("localhost",6969);
             // cria conexao com o output do cliente
@@ -39,12 +37,15 @@ public class ReceiveHives {
             }
 
 
-        } catch (IOException e) {
-            e.printStackTrace();
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new Exception();
         }
 
+    }
+
+    public static void main(String[] args) throws Exception {
+        ReceiveHives c = new ReceiveHives();
+        c.send(1);
     }
 
 }

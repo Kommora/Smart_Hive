@@ -50,10 +50,19 @@ public class Client {
         this.outputStream = outputStream;
     }
 
-    //Convertendo json para string
-    public String jsonToString(String json){
-        String jsonString = json.substring(1,json.length()-1).replaceAll(",","\n").replaceAll("\"","");
-        return jsonString;
+    public String toString(String s) throws Exception {
+        String[] aux = s.split(";");
+        if (aux.length != 8){
+            throw new Exception();
+        }
+        return "Hive{" +"\n"+
+                "weight=" + aux[1] +"\n"+
+                "\t, in_temper=" + aux[2]+"\n"+
+                "\t, ex_temper=" + aux[3]+"\n"+
+                "\t, location='" + aux[4]+ '\'' +"\n"+
+                "\t, moment=" + aux[5] +"\n"+
+                "\t, id=" + aux[0] +"\n"+
+                '}';
     }
 
 }
