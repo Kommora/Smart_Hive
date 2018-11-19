@@ -101,14 +101,14 @@ public class ClientView extends JFrame implements Observer {
 
 	@Override
 	public void update() {
-//		modeloTable.setRowCount(0);
-//
-//		for(int i = 0;i < this.cont;i++){
-//            modeloTable.insertRow(i, dataHive[i]);
-//            modeloTable.insertRow(0, dataHive[i]);
-//        }
+		modeloTable.setRowCount(0);
 
-		modeloTable.insertRow(0,dataHive[0]);
+		for(int i = 0;i < this.cont;i++){
+            modeloTable.insertRow(i, dataHive[i]);
+//            modeloTable.insertRow(0, dataHive[i]);
+        }
+
+//		modeloTable.insertRow(0,dataHive[0]);
 
 
 
