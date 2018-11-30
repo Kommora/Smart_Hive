@@ -12,11 +12,22 @@ public class Server {
 
     private int port; // porta onde o servidos sera hospedado
     private Map<Integer, List<Object>> clients;// mapeia cada cliente conectado a uma lista com suas colmeias
+    private static Server uniqueServer;
 
     public Server(){}
 
-    public Server(int port){
+//    public Server(int port){
+//        this.port = port;
+//    }
+
+    private Server(int port){
         this.port = port;
+    }
+
+    public static Server getInstance(int port){
+        if(uniqueServer == null) uniqueServer = new Server(port);
+
+        return uniqueServer;
     }
 
     public void handShake(Socket socket) throws Exception {
@@ -97,7 +108,7 @@ public class Server {
 
             }
         }catch (Exception e){
-            System.out.println("Erre no servidor");
+            System.out.println("Erro no servidor");
         }
     }
 

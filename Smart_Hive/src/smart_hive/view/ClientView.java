@@ -25,6 +25,7 @@ public class ClientView extends JFrame implements Observer {
 	ReceiveHives clientExecution = new ReceiveHives();
 	//Definindo as colunas da tabela
 	private final String colunas[] = {"Id Colmeia","Weigh","In Temper", "Ex Temper", "Location", "Moment"};
+
 	//Manipular os dados vindos do socket via json em um array
 	private String dataHive[][] = new String[5000][6];
 	public DefaultTableModel modeloTable;
@@ -74,12 +75,6 @@ public class ClientView extends JFrame implements Observer {
         dataHive[this.cont][4] = info[4];
         //Moment
         dataHive[this.cont][5] = info[5];
-//		dataHive[this.cont][0] = info[0].replace("}","").split(":")[1];
-//		dataHive[this.cont][1] = info[1].replace("{","").split(":")[1];
-//		dataHive[this.cont][2] = info[2].split(":")[1];
-//		dataHive[this.cont][3] = info[3].split(":")[1];
-//		dataHive[this.cont][4] = info[4].split(":")[1];
-//		dataHive[this.cont][5] = info[5].split(":")[1];
 
 		this.cont++;
 	}
@@ -113,14 +108,14 @@ public class ClientView extends JFrame implements Observer {
 
 	@Override
 	public void update() {
-		modeloTable.setRowCount(0);
+//		modeloTable.setRowCount(0);
 
-		for(int i = 0;i < this.cont;i++){
-            modeloTable.insertRow(i, dataHive[i]);
+//		for(int i = 0;i < this.cont;i++){
+//            modeloTable.insertRow(i, dataHive[i]);
 //            modeloTable.insertRow(0, dataHive[i]);
-        }
+//        }
 
-//		modeloTable.insertRow(0,dataHive[0]);
+		modeloTable.insertRow(0,dataHive[0]);
 
 
 

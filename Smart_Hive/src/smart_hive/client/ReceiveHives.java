@@ -80,10 +80,12 @@ public class ReceiveHives {
                         //Preenche o vetor da forma como ele deve ser exibido
                         //ta dando erro de nullPointer aqui
                         infoMain[0] = infoAux[5];
-                        for (int i = 0; i < infoMain.length - 1; i++) {
-                            infoMain[i + 1] = infoAux[i];
+//                        for (int i = 0; i < infoMain.length - 1; i++) {
+//                            infoMain[i + 1] = infoAux[i];
+//                        }
+                        for (int i = 0; i < infoMain.length; i++) {
+                            infoMain[i] = infoAux[i];
                         }
-
                         clientView.atualizaInfo(infoMain);
                         this.atualizaObservers();
 

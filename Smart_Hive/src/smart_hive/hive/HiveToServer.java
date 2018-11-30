@@ -106,23 +106,7 @@ public class HiveToServer{
                 System.out.println("Handshake não foi possivel");
                 throw new Exception();
             }
-//            catch (InterruptedException e1) {
-//                e1.printStackTrace();
-//            } catch (UnknownHostException e1) {
-//                e1.printStackTrace();
-//            } catch (IOException e1) {
-//                e1.printStackTrace();
-//            } catch (Exception e1) {
-//                e1.printStackTrace();
-//            }
 
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
 
     }
 

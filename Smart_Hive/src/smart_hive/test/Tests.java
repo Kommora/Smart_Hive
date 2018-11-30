@@ -46,7 +46,8 @@ public class Tests{
     @Test
     public void connectionSameClient(){
         try {
-            Thread t1 = new Thread(new ThreadTestServer(new Server(6969)));
+//            Thread t1 = new Thread(new ThreadTestServer(new Server(6969)));
+            Thread t1 = new Thread(new ThreadTestServer(Server.getInstance(6969)));
             Thread t2 = new Thread(new ThreadTestClient(new ReceiveHives()));
             t1.start();
             t2.start();
@@ -59,7 +60,8 @@ public class Tests{
     @Test
     public void createSameServer(){
         try {
-            Thread t1 = new Thread(new ThreadTestServer(new Server(6969)));
+//            Thread t1 = new Thread(new ThreadTestServer(new Server(6969)));
+            Thread t1 = new Thread(new ThreadTestServer(Server.getInstance(6969)));
             t1.start();
             t1.start();
         }catch (Exception e){

@@ -107,7 +107,7 @@ public class Hive {
     }
 
     public String toSend(){
-        return idHive+";"+weight+";"+in_temper+";"+ex_temper+";"+location+";"+moment+";"+idClient;
+        return idHive+";"+weight+";"+in_temper+";"+ex_temper+";"+location+";"+moment+";"+  idClient;
     }
     
     //funcao de aleatoriedade afim de simular alteracoes do mundo real em sensores
